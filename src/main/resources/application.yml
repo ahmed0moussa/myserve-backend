@@ -1,0 +1,50 @@
+spring:
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/
+      database: test1
+      auto-index-creation: true
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 200MB
+      max-request-size: 200MB
+  mail:
+    host: smtp.gmail.com
+    username: ahmed.mousa.20151@gmail.com
+    password: ievjxcpcfylgkqgd
+    port: 587
+    properties:
+      mail:
+        smtp:
+          starttls:
+            enable: true
+          auth: true
+
+jwtSecret: obUDzHwWI9vbRJmqop8HxFINlOhdUQQC3NCrU16DWd4
+jwtExpirationMs: 86400000
+
+file:
+  uploadDir: ./uploads/Cv
+image:
+  ImageDir: ./uploads/Image
+lettre:
+  LettreDir: ./uploads/Lettre
+compterendu:
+  compterenduDir: ./uploads/compterendu
+app:
+  file:
+    storage:
+      mapping:
+        cv:
+          file:///c:/a-project/dev-myserv/myserve_api/uploads/Cv
+        lettre:
+          file:///c:/a-project/dev-myserv/myserve_api/uploads/Lettre
+        Image:
+          file:///c:/a-project/dev-myserv/myserve_api/uploads/Image
+        compteRendu:
+          file:///c:/a-project/dev-myserv/myserve_api/uploads/compteRendu
+
+
+server:
+  port: 8080
